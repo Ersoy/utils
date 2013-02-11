@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace Utils.Common {
 
-    public class CsvReader<T> where T : new() {
+    public class CsvMapper<T> where T : new() {
         private readonly StreamReader _reader;
         private readonly string[] _columns;
 
-        public CsvReader(Stream stream) {
+        public CsvMapper(Stream stream) {
             if (stream == null) {
                 throw new ArgumentNullException("stream");
             }
