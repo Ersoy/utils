@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-
-namespace Utils.Common {
+﻿namespace Utils.Common {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.IO;
+    using System.Linq;
 
     public class CsvMapper<T> where T : new() {
         private readonly StreamReader _reader;
@@ -14,6 +13,7 @@ namespace Utils.Common {
             if (stream == null) {
                 throw new ArgumentNullException("stream");
             }
+
             _reader = new StreamReader(stream);
             _columns = GetColumns();
         }
@@ -28,7 +28,7 @@ namespace Utils.Common {
         private string[] GetColumns() {
             var line = _reader.ReadLine();
 
-            if (String.IsNullOrEmpty(line)) {
+            if (string.IsNullOrEmpty(line)) {
                 throw new InvalidOperationException();
             }
 
