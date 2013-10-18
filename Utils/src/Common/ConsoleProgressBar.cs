@@ -31,8 +31,7 @@ namespace Utils.Common {
         protected virtual void WriteValue(int val) {
             var result = (double)val * LINE_LENGTH / _max;
 
-            if (Convert.ToInt32(result) != _position) {
-                System.Diagnostics.Debug.WriteLine("result: {0:n3}, position: {1:n0}", result, _position);
+            if (Convert.ToInt32(result) != _position) {                
                 Console.Write(new String('\b', _position));
                 Console.Write(new String(' ', _position));
                 Console.Write(new String('\b', _position));
