@@ -1,9 +1,10 @@
-﻿namespace Utils.Common {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.IO;
-    using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Linq;
+
+namespace Utils.Common {    
 
     public class CsvMapper<T> where T : new() {
         private readonly StreamReader _reader;
